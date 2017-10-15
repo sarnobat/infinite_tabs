@@ -1,0 +1,24 @@
+{
+  "name": "Infinite tabs",
+  "version": "1.0",
+  "description": "Save tab urls to server",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "background": { "scripts": ["background_script.js"] },
+  "browser_action": {
+    "default_title": "This is the default title",
+    "default_icon": "sign-check-icon.png"
+    
+  },
+  "permissions": [
+	"http://*/*",
+	"https://*/*",
+	"tabs",
+	"alarms"
+  ],
+  "manifest_version": 2
+}
