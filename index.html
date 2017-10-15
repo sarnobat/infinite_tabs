@@ -1,0 +1,16 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<script>
+var jqxhr = $.ajax( "http://localhost:8080" )
+  .done(function(data) {
+    console.log("success " + data.foo );
+  })
+  .fail(function() {
+    alert( "error" );
+  })
+  .always(function() {
+    console.log( "complete" );
+  });
+</script>
